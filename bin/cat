@@ -3,7 +3,7 @@
 var fs = require('fs');
 var from = process.argv[2];
 
-if (existsSync(from)) {
+if (fs.existsSync(from)) {
 	fs.createReadStream(from).pipe( process.stdout );
 }
 else {
